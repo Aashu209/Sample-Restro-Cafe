@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sample Restro & Cafe | Premium Bakery Cafe in Bhubaneswar</title>
+
+    <link href="https://fonts.googleapis.com/css2?family=Allura&family=Montserrat:wght@500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- LOADER -->
+<div id="loader">
+    <img src="./assets/logo.png" alt="">
+    <h1 class="logo-script">Sample Restro & Cafe</h1>
+    <p class="logo-sub">Bhubaneswar | Cuttack</p>
+</div>
+
+<!-- HEADER -->
+<header>
+    <nav>
+    <div class="logo"><span class="logo-script">Sample</span> <span class="logo-sub">Restro & Cafe</span></div>
+    
+    <div class="menu-toggle" id="mobile-menu"><i class="fas fa-bars"></i></div>
+    
+    <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="index.html#menu">Menu</a></li>
+            <li><a href="index.html#gallery">Gallery</a></li>
+            <li><a href="index.html#reviews">Testimonials</a></li>
+            <li><a href="index.html#contact">Find Us</a></li>
+            <a href="cart.html">Cart (<span id="cart-count">0</span>)</a>
+        </ul>
+    </nav>
+</header>
+    <section class="cart-page">
+  <h2 class="cart-title">Your Cart</h2>
+
+  <div class="cart-layout">
+    <!-- LEFT: ITEMS -->
+    <div class="cart-items" id="cart-items">
+      <!-- JS will inject items here -->
+    </div>
+
+    <!-- RIGHT: SUMMARY -->
+    <div class="cart-summary">
+      <p class="total" id="cart-total">Total: ₹0</p>
+
+      <input id="cust-name" type="text" placeholder="Your Name">
+      <input id="cust-phone" type="tel" placeholder="Phone Number">
+
+      <select id="order-type">
+        <option>Dine-in</option>
+        <option>Takeaway</option>
+        <option>Delivery</option>
+      </select>
+
+      <button id="whatsapp-order">
+        Order on WhatsApp
+      </button>
+    </div>
+  </div>
+</section>
+
+
+
+    <!-- JS -->
+    <script src="script.js"></script>
+</body>
+</html>
+

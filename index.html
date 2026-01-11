@@ -14,7 +14,6 @@
 
 <!-- LOADER -->
 <div id="loader">
-    <img src="./assets/logo.png" alt="">
     <h1 class="logo-script">Sample Restro & Cafe</h1>
     <p class="logo-sub">Bhubaneswar | Cuttack</p>
 </div>
@@ -33,6 +32,7 @@
             <li><a href="#gallery">Gallery</a></li>
             <li><a href="#reviews">Testimonials</a></li>
             <li><a href="#contact">Find Us</a></li>
+            <a href="cart.html">Cart (<span id="cart-count">0</span>)</a>
         </ul>
 </nav>
 </header>
@@ -53,73 +53,194 @@
 </section>
 
 <!-- MENU -->
+<!-- MENU -->
 <section id="menu" class="menu-section">
-    <h2 class="section-title">Signature Treats</h2>
-    <p class="section-subtitle">A glimpse of what makes Sample Restro Cafe special</p>
+  <h2 class="section-title">Signature Treats</h2>
+  <p class="section-subtitle">A glimpse of what makes Sample Restro Cafe special</p>
 
-    <div class="menu-cards-grid">
-        <div class="menu-card">
-            <h3>Mocktails & Mojitos</h3>
-            <ul>
-                <li><span>Classic Mint Mojito</span><span>₹150</span></li>
-                <li><span>Blue Lagoon Mojito</span><span>₹160</span></li>
-                <li><span>Green Apple Mojito</span><span>₹160</span></li>
-                <li><span>Strawberry Mojito</span><span>₹160</span></li>
-                <li><span>Double Flavour Mojito</span><span>₹170</span></li>
-            </ul>
-        </div>
+  <div class="menu-cards-grid">
 
-        <div class="menu-card">
-            <h3>Combos</h3>
-            <ul>
-                <li><span>Classic Burger + Fries + Mojito (Veg)</span><span>₹400</span></li>
-                <li><span>Classic Burger + Fries + Mojito (Chicken)</span><span>₹420</span></li>
-                <li><span>Pizza + Fries + Mojito (Veg)</span><span>₹490</span></li>
-                <li><span>Pizza + Fries + Mojito (Chicken)</span><span>₹510</span></li>
-            </ul>
-        </div>
+    <!-- MOCKTAILS -->
+    <div class="menu-card">
+      <h3>Mocktails & Mojitos</h3>
+      <ul>
+        <li data-name="Classic Mint Mojito" data-price="150">
+          <span>Classic Mint Mojito</span>
+          <span class="price">₹150</span>
+          <div class="qty-box hidden">
+            <button class="qty-minus">−</button>
+            <span class="qty">1</span>
+            <button class="qty-plus">+</button>
+          </div>
+          <button class="add-btn">Add</button>
+        </li>
 
-        <div class="menu-card">
-            <h3>Coffee & Beverages</h3>
-            <ul>
-                <li><span>Cappuccino</span><span>₹150</span></li>
-                <li><span>Café Latte</span><span>₹160</span></li>
-                <li><span>Irish Coffee</span><span>₹160</span></li>
-                <li><span>Hazelnut Coffee</span><span>₹160</span></li>
-                <li><span>Hot Chocolate</span><span>₹140</span></li>
-            </ul>
-        </div>
+        <li data-name="Blue Lagoon Mojito" data-price="160">
+          <span>Blue Lagoon Mojito</span>
+          <span class="price">₹160</span>
+          <div class="qty-box hidden">
+            <button class="qty-minus">−</button>
+            <span class="qty">1</span>
+            <button class="qty-plus">+</button>
+          </div>
+          <button class="add-btn">Add</button>
+        </li>
 
-        <div class="menu-card">
-            <h3>Frappe & Cold Coffee</h3>
-            <ul>
-                <li><span>Tall N Dark</span><span>₹240</span></li>
-                <li><span>Dark Frappe</span><span>₹230</span></li>
-                <li><span>Café Frappe</span><span>₹200</span></li>
-                <li><span>Flavour Frappe</span><span>₹230</span></li>
-            </ul>
-        </div>
+        <li data-name="Green Apple Mojito" data-price="150">
+          <span>Green Apple Mojito</span>
+          <span class="price">₹150</span>
+          <div class="qty-box hidden">
+            <button class="qty-minus">−</button>
+            <span class="qty">1</span>
+            <button class="qty-plus">+</button>
+          </div>
+          <button class="add-btn">Add</button>
+        </li>
 
-        <div class="menu-card">
-            <h3>Frappe & Cold Coffee</h3>
-            <ul>
-                <li><span>Tall N Dark</span><span>₹240</span></li>
-                <li><span>Dark Frappe</span><span>₹230</span></li>
-                <li><span>Café Frappe</span><span>₹200</span></li>
-                <li><span>Flavour Frappe</span><span>₹230</span></li>
-            </ul>
-        </div>
+        <li data-name="Strawberry Mojito" data-price="160">
+          <span>Strawberry Mojito</span>
+          <span class="price">₹160</span>
+          <div class="qty-box hidden">
+            <button class="qty-minus">−</button>
+            <span class="qty">1</span>
+            <button class="qty-plus">+</button>
+          </div>
+          <button class="add-btn">Add</button>
+        </li>
 
-        <div class="menu-card">
-            <h3>Frappe & Cold Coffee</h3>
-            <ul>
-                <li><span>Tall N Dark</span><span>₹240</span></li>
-                <li><span>Dark Frappe</span><span>₹230</span></li>
-                <li><span>Café Frappe</span><span>₹200</span></li>
-                <li><span>Flavour Frappe</span><span>₹230</span></li>
-            </ul>
-        </div>
+        <li data-name="Double Flavour Mojito" data-price="170">
+          <span>Double Flavour Mojito</span>
+          <span class="price">₹170</span>
+          <div class="qty-box hidden">
+            <button class="qty-minus">−</button>
+            <span class="qty">1</span>
+            <button class="qty-plus">+</button>
+          </div>
+          <button class="add-btn">Add</button>
+        </li>
+      </ul>
     </div>
+
+    <!-- COMBOS -->
+    <div class="menu-card">
+      <h3>Combos</h3>
+      <ul>
+
+        <li data-name="Classic Burger + Fries + Mojito (Veg)" data-price="400">
+          <span>Classic Burger + Fries + Mojito (Veg)</span>
+          <span class="price">₹400</span>
+          <div class="qty-box hidden">
+            <button class="qty-minus">−</button>
+            <span class="qty">1</span>
+            <button class="qty-plus">+</button>
+          </div>
+          <button class="add-btn">Add</button>
+        </li>
+
+        <li data-name="Classic Burger + Fries + Mojito (Chicken)" data-price="420">
+          <span>Classic Burger + Fries + Mojito (Chicken)</span>
+          <span class="price">₹420</span>
+          <div class="qty-box hidden">
+            <button class="qty-minus">−</button>
+            <span class="qty">1</span>
+            <button class="qty-plus">+</button>
+          </div>
+          <button class="add-btn">Add</button>
+        </li>
+
+        <li data-name="Pizza + Fries + Mojito (Veg)" data-price="490">
+          <span>Pizza + Fries + Mojito (Veg)</span>
+          <span class="price">₹490</span>
+          <div class="qty-box hidden">
+            <button class="qty-minus">−</button>
+            <span class="qty">1</span>
+            <button class="qty-plus">+</button>
+          </div>
+          <button class="add-btn">Add</button>
+        </li>
+
+        <li data-name="Pizza + Fries + Mojito (Chicken)" data-price="510">
+          <span>Pizza + Fries + Mojito (Chicken)</span>
+          <span class="price">₹510</span>
+          <div class="qty-box hidden">
+            <button class="qty-minus">−</button>
+            <span class="qty">1</span>
+            <button class="qty-plus">+</button>
+          </div>
+          <button class="add-btn">Add</button>
+        </li>
+      </ul>
+    </div>
+
+    <!-- COFFEE -->
+    <div class="menu-card">
+      <h3>Coffee & Beverages</h3>
+      <ul>
+
+        <!-- Cappuccino -->
+        <li data-name="Cappuccino" data-price="150">
+          <span>Cappuccino</span>
+          <span class="price">₹150</span>
+          <div class="qty-box hidden">
+            <button class="qty-minus">−</button>
+            <span class="qty">1</span>
+            <button class="qty-plus">+</button>
+          </div>
+          <button class="add-btn">Add</button>
+        </li>
+
+        <!-- Café Latte -->
+        <li data-name="Café Latte" data-price="160">
+          <span>Café Latte</span>
+          <span class="price">₹160</span>
+          <div class="qty-box hidden">
+            <button class="qty-minus">−</button>
+            <span class="qty">1</span>
+            <button class="qty-plus">+</button>
+          </div>
+          <button class="add-btn">Add</button>
+        </li>
+
+        <!-- Irish Coffee -->
+        <li data-name="Irish Coffee" data-price="160">
+          <span>Irish Coffee</span>
+          <span class="price">₹160</span>
+          <div class="qty-box hidden">
+            <button class="qty-minus">−</button>
+            <span class="qty">1</span>
+            <button class="qty-plus">+</button>
+          </div>
+          <button class="add-btn">Add</button>
+        </li>
+
+        <!-- Hazelnut Coffee -->
+        <li data-name="Hazelnut Coffee" data-price="160">
+          <span>Hazelnut Coffee</span>
+          <span class="price">₹160</span>
+          <div class="qty-box hidden">
+            <button class="qty-minus">−</button>
+            <span class="qty">1</span>
+            <button class="qty-plus">+</button>
+          </div>
+          <button class="add-btn">Add</button>
+        </li>
+
+        <!-- Hot Chocolate -->
+        <li data-name="Hot Chocolate" data-price="140">
+          <span>Hot Chocolate</span>
+          <span class="price">₹140</span>
+          <div class="qty-box hidden">
+            <button class="qty-minus">−</button>
+            <span class="qty">1</span>
+            <button class="qty-plus">+</button>
+          </div>
+          <button class="add-btn">Add</button>
+        </li>
+
+      </ul>
+    </div>
+
+  </div>
 </section>
 
 
@@ -198,19 +319,17 @@
 
     <div class="gallery-wrapper">
         <div class="gallery-track">
-            <div class="gallery-item"><img src="assets/food1.webp"></div>
-            <div class="gallery-item"><img src="assets/food2.webp"></div>
-            <div class="gallery-item"><img src="assets/food3.webp"></div>
-            <div class="gallery-item"><img src="assets/Food4.webp"></div>
-            <div class="gallery-item"><img src="assets/food5.webp"></div>
-            <div class="gallery-item"><img src="assets/food6.webp"></div>
-            <div class="gallery-item"><img src="assets/food7.webp"></div>
-            <div class="gallery-item"><img src="assets/food8.webp"></div>
-            <div class="gallery-item"><img src="assets/food9.webp"></div>
-            <div class="gallery-item"><img src="assets/food10.webp"></div>
-            <div class="gallery-item"><img src="assets/food11.webp"></div>
-            <div class="gallery-item"><img src="assets/food12.webp"></div>
-
+            <div class="gallery-item"><img src="https://lh3.googleusercontent.com/p/AF1QipN7jaW9vxpqxYlHCRfcosR91DTVQyTLsVGLGsqJ=s1360-w1360-h1020-rw"></div>
+            <div class="gallery-item"><img src="https://lh3.googleusercontent.com/p/AF1QipO-8r2fbLwYGxVw1_3VTrJEyLcPGi4uF7WdgPVc=s1360-w1360-h1020-rw"></div>
+            <div class="gallery-item"><img src="https://lh3.googleusercontent.com/p/AF1QipP75_iDSOS4wpEgzZCfOgrqqQTJ-q5foobx8pMY=s1360-w1360-h1020-rw"></div>
+            <div class="gallery-item"><img src="https://lh3.googleusercontent.com/p/AF1QipPKgNXv9qNA7f5zVwR_nxC7DEzBNRLaql-0uxzN=s1360-w1360-h1020-rw"></div>
+            <div class="gallery-item"><img src="https://lh3.googleusercontent.com/p/AF1QipMvm5Inkg2cgz_3X2EIFHwxFP_zZNesNmO4QivV=s1360-w1360-h1020-rw"></div>
+            <div class="gallery-item"><img src="https://lh3.googleusercontent.com/p/AF1QipMWA-HoD8JUfaxGsceWJdtSrxNUyCXutGlbfzI4=s1360-w1360-h1020-rw"></div>
+            <div class="gallery-item"><img src="https://lh3.googleusercontent.com/p/AF1QipPqznkNyQtT55Yq7K2q6Hj3DXe14p0fgv4rBfdg=s1360-w1360-h1020-rw"></div>
+            <div class="gallery-item"><img src="https://lh3.googleusercontent.com/gps-cs-s/AG0ilSwVLk5jofE5uNMutX1o1yuDA4phF-cErDUipBxCM9jJsB5wx3bJqW95i-7_I67qTWcMdVqIsBeSXko_BLV7la7W9Zy_FeW1i6NuyNZxYlHaouZFjaId_PgT1RDGRsXRSH74HnNzrA=s1360-w1360-h1020-rw"></div>
+            <div class="gallery-item"><img src="https://lh3.googleusercontent.com/p/AF1QipOr9MA6S05A3ZskjrGSN1l5QLvIpm7GZZX7kbgc=s1360-w1360-h1020-rw"></div>
+            <div class="gallery-item"><img src="https://lh3.googleusercontent.com/gps-cs-s/AG0ilSxhh57sBFc7eMi5LI7ouyjXF8VMP17Kb46xWLMJMdarq6GLRtBMxcJFC0qi4zN7oW08qBAMeKBgjvxUFbb2KEUYkWWaHE4iMHywFXJyEbPQfWzLdElT9xrPcB4zr2LaraBuUslf=s1360-w1360-h1020-rw"></div>
+            <div class="gallery-item"><img src="https://lh3.googleusercontent.com/gps-cs-s/AG0ilSykgINhf2FRVou5gWb6Yql8UYBeCY_xa9uEczk2_nBt5SEmSoDVDWSk8IgrxjsWD2_W-PJ9T3yyUO92T9TSRwU4YjmWfWrbWRpUVVKqmoAjxXAAg8KWsTrcllEBxHO05ME56vTZ=s1360-w1360-h1020-rw"></div>
         </div>
     </div>
 </section>
@@ -353,7 +472,7 @@
 
         <!-- OUTLET 1 -->
         <div class="outlet-card">
-            <img src="./assets/nayapali.png" alt="Oberai Bakers Nayapalli">
+            <img src="https://dt4l9bx31tioh.cloudfront.net/eazymedia/restaurant/700309/restaurant320241130071624.jpeg?width=818&height=450&mode=crop" alt="Oberai Bakers Nayapalli">
             <div class="outlet-info">
                 <h3>Nayapalli</h3>
                 <p><strong>Address:</strong> Plot No 1294, CRP - DAV Rd, Nilakantha Nagar</p>
@@ -375,7 +494,7 @@
 
         <!-- OUTLET 3 -->
         <div class="outlet-card">
-            <img src="./assets/nayapali.png" alt="Oberai Bakers Khandagiri">
+            <img src="https://dt4l9bx31tioh.cloudfront.net/eazymedia/restaurant/700309/restaurant320241130071624.jpeg?width=818&height=450&mode=crop" alt="Oberai Bakers Khandagiri">
             <div class="outlet-info">
                 <h3>Khandagiri</h3>
                 <p><strong>Address:</strong> Khandagiri Square, Bhubaneswar</p>
@@ -386,7 +505,7 @@
 
         <!-- OUTLET 4 -->
         <div class="outlet-card">
-            <img src="./assets/nayapali.png" alt="Oberai Bakers Saheed Nagar">
+            <img src="https://dt4l9bx31tioh.cloudfront.net/eazymedia/restaurant/700309/restaurant320241130071624.jpeg?width=818&height=450&mode=crop" alt="Oberai Bakers Saheed Nagar">
             <div class="outlet-info">
                 <h3>Saheed Nagar</h3>
                 <p><strong>Address:</strong> Saheed Nagar Main Road, Bhubaneswar</p>
@@ -397,7 +516,7 @@
 
         <!-- OUTLET 5 -->
         <div class="outlet-card">
-            <img src="./assets/nayapali.png" alt="Oberai Bakers Cuttack">
+            <img src="https://dt4l9bx31tioh.cloudfront.net/eazymedia/restaurant/700309/restaurant320241130071624.jpeg?width=818&height=450&mode=crop" alt="Oberai Bakers Cuttack">
             <div class="outlet-info">
                 <h3>Cuttack</h3>
                 <p><strong>Address:</strong> College Square, Cuttack</p>
